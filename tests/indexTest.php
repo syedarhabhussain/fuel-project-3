@@ -3,11 +3,12 @@ use PHPUnit\Framework\TestCase;
 
 class LoginFormTest extends TestCase
 {
-    public function testHeaderInclude()
+    public function testLoginInclude()
     {
         ob_start();
-        include __DIR__ . '/../src/header.php';
+        include __DIR__ . '/../src/index.php';
         $output = ob_get_clean();
-        $this->assertStringContainsString('<header', $output);
+        $this->assertStringContainsString('<head', $output);
+        $this->assertStringContainsString('<body', $output);
     }
 }
