@@ -1,9 +1,9 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-class FuelFormTest extends TestCase
+class FuelQuoteFormTest extends TestCase
 {
-    public function testFuelInclude()
+    public function testFuelQuoteInclude()
     {
         ob_start();
         include __DIR__ . '/../src/fuel-quote-form.php';
